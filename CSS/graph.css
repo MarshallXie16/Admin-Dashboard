@@ -36,7 +36,7 @@
 
 .grid-item.stats-card.red {
     grid-area: stats-red;
-    background-image: url("/images/red.png");
+    background-image: url("Admin-Dashboard/images/red.png");
 }
 
 .grid-item.stats-card.green {
