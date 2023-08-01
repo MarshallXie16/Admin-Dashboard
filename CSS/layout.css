@@ -1,0 +1,74 @@
+/* PAGE STRUCTURE */
+body {
+    width: 100vw;
+    height: auto;
+    color: #121212 ;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    --container-color: white;
+    --icon-color: black;
+    --searchbar-color: black;
+    --searchbar-bg: white;
+    --searchbar-text: #ccc;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    color: var(--sidebar-color);
+    background-color: var(--sidebar-bg);
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    transition: width 0.2s ease;
+}
+
+.main {
+    margin-left: var(--sidebar-width);
+    width: calc(100vw - 5rem);
+    height: 100%;
+}
+
+/* DASHBOARD LAYOUT */
+.content {
+    box-sizing: border-box;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.content > h1 {
+    margin-top: 0;
+}
+
+.content-grid {
+   display: grid;
+   height: 70vh;
+   grid-template-columns: repeat(5, minmax(17rem, 1fr));
+   grid-template-rows: 25% auto;
+   column-gap: 4rem;
+   row-gap: 4rem;
+   grid-template-areas: 
+        "stats-red stats-green stats-purple my-team my-team"
+        "graph         graph      graph      to-do   to-do";
+}
+
+.content-grid .grid-item {
+    /*border: 2px solid blue;*/
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container-color);
+}

@@ -1,0 +1,73 @@
+/* STATS CARD */
+.grid-item.stats-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; /* softer white !!!*/
+    padding: 1.5rem;
+
+    justify-content: space-evenly;
+
+    border-radius: 2rem;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* stats card text */
+.card-text > h1, .card-text > h2 {
+    margin: 0;
+}
+.card-text > h1, .grdi-item{
+    font-size: 3rem;
+}
+.card-text > h2, .task-title{
+    font-size: 2rem;
+}
+/* stats card icons */
+.card-icon {
+    font-size: 4rem;
+}
+
+.grid-item.stats-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item.stats-card.red {
+    grid-area: stats-red;
+    background-image: url("/images/red.png");
+}
+
+.grid-item.stats-card.green {
+    grid-area: stats-green;
+    background-image: url("/images/green.png");
+}
+
+.grid-item.stats-card.purple {
+    grid-area: stats-purple;
+    background-image: url("/images/purple.png");
+}
+
+
+/* GRAPH */
+
+.graph, .to-do, .my-team{
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.graph:hover, .to-do:hover, .my-team:hover {
+    transform: scale(1.01);
+}
+
+.grid-item.graph {
+    grid-area: graph;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/graph.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

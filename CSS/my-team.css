@@ -1,0 +1,60 @@
+/* MY TEAM */
+
+/* my-team container */
+.grid-item.my-team {
+    grid-area: my-team;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* my-team heading */
+.grid-item.my-team > h2 {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* my team profile container */
+.grid-item.my-team > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* team member */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* team member profile icon */
+.team-member div {
+    width: 4rem;
+    height: 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 2px solid var(--main-blue);
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* team members */
+#member1 {
+    background-image: url('/images/pfp1.jpg');
+}
+#member2 {
+    background-image: url('/images/pfp2.jpg');
+}
+#member3 {
+    background-image: url('/images/pfp3.jpg');
+}
+
+/* animations */
+.team-member div:hover {
+    box-shadow: 0px 0px 8px var(--main-blue);
+}

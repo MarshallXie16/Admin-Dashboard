@@ -1,0 +1,131 @@
+
+/* TO-DO LIST */
+
+/* to-do list structure */
+.grid-item.to-do {
+    grid-area: to-do;
+    background-size: cover;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    display: block;
+    /* size based on content !!! */
+}
+
+/* TASK HEADER */
+.task-header {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-header > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.task-header > div > h2 {
+    margin: 0;
+    margin-bottom: 0.3rem;
+}
+.task-header > div > h5 {
+    margin: 0;
+    color: var(--stylish-grey);
+}
+
+/* add tasks button */
+#add-tasks {
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: var(--main-blue);
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 2px solid var(--main-blue);
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+#add-tasks:hover {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+
+/* tasks */
+.tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* checkbox and pseudo-checkbox */
+.task > input[type="checkbox"], .custom-box {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.task > input[type="checkbox"] {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* pseudo-checkbox */
+.custom-box {
+    display: inline-block;
+    position: absolute;
+    margin-left: 0.4rem;
+    border-radius: 50%;
+    border: 2px solid var(--stylish-grey);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* checkmark */
+.bi-check {
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--checkmark-color);
+    display: none;
+    transition: display 0.5s;
+    transition-delay: 0.3s;
+}
+
+/* label for each task */
+.task > label {
+    transition: color 0.3s, text-decoration 0.3s;
+    cursor: pointer;
+}
+
+/* checkbox checked */
+.task > input[type="checkbox"]:checked ~ .custom-box{
+    background: var(--main-blue);
+}
+.task > input[type="checkbox"]:checked ~ .bi-check {
+    display: block;
+}
+.task > input[type="checkbox"]:checked ~ label{
+    color: var(--stylish-grey);
+    text-decoration: line-through;
+}
+
+/* task animation */
+.task:hover {
+    background-color: rgb(213, 213, 213);
+}
+.task > input[type="checkbox"]:hover ~ .custom-box {
+    box-shadow: 0px 0px 5px rgb(78, 143, 255);
+}

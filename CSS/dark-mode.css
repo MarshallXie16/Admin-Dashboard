@@ -1,0 +1,44 @@
+body {
+    --background-color: #010518;
+    --secondary-color: #020827;
+    --accent-color: #5A73FC;
+    --text-color: white;
+}
+
+
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .sidebar {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode .grid-item {
+
+    background-color: #181f41;
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode a:hover {
+    color: var(--accent-color);
+}
+
+body.dark-mode li:hover {
+    color: var(--accent-color);
+}
+
+body.dark-mode .task:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* darken images */
+body.dark-mode .graph, body.dark-mode .stats-card, body.dark-mode .team-member {
+    opacity: 75%;
+    background-color: #181f41;
+}

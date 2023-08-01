@@ -1,0 +1,133 @@
+/* HEADER START*/
+.header {
+    width: 100%;
+    height: 10%;
+    position: sticky;
+    padding: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);;
+
+}
+
+.profile-container {
+    font-size: 3.5rem;
+    margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.search-container {
+    margin-left: 1rem;
+    width: clamp(200px, 20%, 500px);
+}
+
+.form-input {
+    position: relative;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; 
+    border: 2px solid var(--searchbar-text);
+    border-radius: 25px;
+    /* transition for hover effects */
+    transition: border 0.3s;
+    background-color: var(--searchbar-bg);
+    color: var(--searchbar-color);
+}
+
+input[type="search"]:focus {
+    outline: none;
+    border-color: var(--main-blue);
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: var(--searchbar-color);
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    color: var(--main-blue);
+}
+
+/* Dark mode switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+/* Hide default checkbox */
+.switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style the slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+/* Round slider */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%; /* Circular slider */
+    transition: 0.4s;
+}
+
+/* Move the slider when the checkbox is checked */
+input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(18px);
+    background-color: black;
+}
+input[type="checkbox"]:checked + .slider {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Style the icons */
+.profile-container a {
+    text-decoration: none;
+    color: var(--icon-color);
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.profile-container a:hover {
+    color: var(--main-blue);
+}
+
+#darkModeToggle {
+    opacity: 0;
+}
+
+.bi-bell, .bi-person-circle, .switch {
+    cursor: pointer;
+}

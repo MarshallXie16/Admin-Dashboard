@@ -1,0 +1,67 @@
+/* SIDEBAR START */
+
+/* remove list styling */
+.sidebar ul {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* style each link */
+.sidebar ul li {
+    height: var(--sidebar-width);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: text-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* push last child to the end */
+.sidebar ul li:last-child{
+    margin-top: auto;
+}
+
+/* hide sidebar text */
+.sidebar ul li p {
+    margin-left: 0.5rem;
+    display: none;
+    transition: display 0.2s;
+    transition-delay: 0.2s;
+}
+
+/* hide logo text */
+.logo > h1 + h1 {
+    display: none;
+    transition: display 0.2s;
+    transition-delay: 0.2s;
+}
+.logo > h1 {
+    font-size: 2rem;
+}
+.logo {
+    display: flex;
+    justify-content: start;
+}
+
+/* sidebar animation */
+
+.sidebar:hover {
+    width: var(--sidebar-width-hover);
+}
+
+.sidebar:hover ul {
+    align-items: start;
+}
+
+.sidebar:hover ul li p, .sidebar:hover .logo > h1 + h1 {
+    display: block;
+}
+
+.sidebar ul li:hover {
+    color: blue;
+    text-shadow: 0px 0px 5px rgb(95, 95, 252);
+}
