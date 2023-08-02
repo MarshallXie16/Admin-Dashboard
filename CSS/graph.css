@@ -36,17 +36,17 @@
 
 .grid-item.stats-card.red {
     grid-area: stats-red;
-    background-image: url("Admin-Dashboard/images/red.png");
+    background-image: url("/Admin-Dashboard/images/red.png");
 }
 
 .grid-item.stats-card.green {
     grid-area: stats-green;
-    background-image: url("/images/green.png");
+    background-image: url("/Admin-Dashboard/images/green.png");
 }
 
 .grid-item.stats-card.purple {
     grid-area: stats-purple;
-    background-image: url("/images/purple.png");
+    background-image: url("/Admin-Dashboard/images/purple.png");
 }
 
 
@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/graph.png");
+    background-image: url("/Admin-Dashboard/images/graph.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
